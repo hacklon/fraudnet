@@ -1,0 +1,54 @@
+{
+  "rings": {
+    "ring_0": {
+      "members": [
+        "R0M00",
+        "R0M01",
+        "R0M02",
+        "R0M03",
+        "R0M04",
+        "R0M05",
+        "R0M06"
+      ],
+      "mule": "R0MULE",
+      "cashout": "R0CASH"
+    },
+    "ring_1": {
+      "members": [
+        "R1M00",
+        "R1M01",
+        "R1M02",
+        "R1M03",
+        "R1M04",
+        "R1M05"
+      ],
+      "mule": "R1MULE",
+      "cashout": "R1CASH"
+    },
+    "ring_2": {
+      "members": [
+        "R2M00",
+        "R2M01",
+        "R2M02",
+        "R2M03",
+        "R2M04",
+        "R2M05",
+        "R2M06"
+      ],
+      "mule": "R2MULE",
+      "cashout": "R2CASH"
+    }
+  },
+  "decoys": {
+    "family_shared_device": [
+      "A0010",
+      "A0011",
+      "A0012",
+      "A0013"
+    ],
+    "corporate_ip": {
+      "ip": "IP_CORP",
+      "n": 40
+    }
+  }
+}

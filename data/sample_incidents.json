@@ -1,0 +1,35 @@
+
+{
+  "incident_id": "INC-001",
+  "title": "Revenue dashboard showing stale data",
+  "schema_change": {
+    "id": "SC-001",
+    "description": "customer_id changed from STRING to INTEGER",
+    "status": "detected"
+  },
+  "pipeline": {
+    "id": "PL-001",
+    "name": "customer_transformation",
+    "status": "FAILED",
+    "error": "Type mismatch while processing customer_id"
+  },
+  "dataset": {
+    "id": "DS-001",
+    "name": "gold_customer_revenue",
+    "status": "STALE"
+  },
+  "dashboard": {
+    "id": "DB-001",
+    "name": "Revenue Dashboard",
+    "status": "STALE"
+  },
+  "relationships": [
+    "SC-001 -[TRIGGERED]-> PL-001",
+    "PL-001 -[PRODUCES]-> DS-001",
+    "DS-001 -[FEEDS]-> DB-001"
+  ],
+  "historical_resolution": {
+    "description": "Validate the incoming customer_id type and apply an explicit cast before transformation.",
+    "verified": false
+  }
+}
